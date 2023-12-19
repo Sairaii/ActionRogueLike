@@ -33,7 +33,6 @@ ASExplosiveBarrel::ASExplosiveBarrel()
 	// Default constructor of component already adds 4 object types to affect, excluding WorldDynamic (Check RadialForceComponent.cpp at line 27-31). Right now we add world dynamic as well
 	// Or in BP Radial Force, Check into Radial Force Component>Object Types To Affect
 	ForceComp->AddCollisionChannelToAffect(ECC_WorldDynamic);
-
 }
 
 void ASExplosiveBarrel::PostInitializeComponents()
