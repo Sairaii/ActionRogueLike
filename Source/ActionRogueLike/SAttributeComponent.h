@@ -16,6 +16,12 @@ class ACTIONROGUELIKE_API USAttributeComponent : public UActorComponent
 public:
 	USAttributeComponent();
 
+	UFUNCTION(BlueprintCallable, Category = "Attributes")
+	static USAttributeComponent* GetAttributes(AActor* FromActor);
+
+	UFUNCTION(BlueprintCallable, Category = "Attributes", meta = (DisplayName = "IsAlive"))
+	static bool IsActorAlive(AActor* Actor);
+
 protected:
 	
 	// EditAnywhere - edit in BP editor and per-instance in level.
@@ -49,5 +55,5 @@ public:
 	FOnHealthChanged OnHealthChanged;
 	
 	UFUNCTION(BlueprintCallable, Category = "Attributes")
-	bool ApplyHealthChange(float Delta);
+	bool ApplyHealthChange(AActor* InstigatorActor, float Delta);
 };
