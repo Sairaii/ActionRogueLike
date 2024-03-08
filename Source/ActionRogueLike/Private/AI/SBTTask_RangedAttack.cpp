@@ -24,8 +24,6 @@ EBTNodeResult::Type USBTTask_RangedAttack::ExecuteTask(UBehaviorTreeComponent& O
 			return EBTNodeResult::Failed;
 		}
 
-		FVector MuzzleLocation = MyPawn->GetMesh()->GetSocketLocation("Muzzle_01");
-
 		AActor* TargetActor = Cast<AActor>(OwnerComp.GetBlackboardComponent()->GetValueAsObject("TargetActor"));
 		if (TargetActor == nullptr)
 		{
@@ -36,10 +34,12 @@ EBTNodeResult::Type USBTTask_RangedAttack::ExecuteTask(UBehaviorTreeComponent& O
 		{
 			return EBTNodeResult::Failed; //will not keep looping, just immediately fail out of this entire tree. It still continue to come back in
 		}
-
+		
+		FVector MuzzleLocation = MyPawn->GetMesh()->GetSocketLocation("Muzzle_01");
 		FVector Direction = TargetActor->GetActorLocation() - MuzzleLocation;
 		FRotator MuzzleRotation = Direction.Rotation();
 
+		// Ignore negative pitch to not hit the floor in front itself
 		MuzzleRotation.Pitch += FMath::RandRange(0.0f, MaxBulletSpread);
 		MuzzleRotation.Yaw += FMath::RandRange(-MaxBulletSpread, MaxBulletSpread);
 

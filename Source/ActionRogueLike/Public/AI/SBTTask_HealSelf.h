@@ -13,5 +13,6 @@ UCLASS()
 class ACTIONROGUELIKE_API USBTTask_HealSelf : public UBTTaskNode
 {
 	GENERATED_BODY()
-	
+
+	virtual EBTNodeResult::Type ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory) override;
 };

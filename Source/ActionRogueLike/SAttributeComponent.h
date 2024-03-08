@@ -52,6 +52,9 @@ public:
 	bool IsFullHealth() const;
 
 	UFUNCTION(BlueprintCallable)
+	float GetHealth() const;
+
+	UFUNCTION(BlueprintCallable)
 	float GetMaxHealth() const;
 	
 	UPROPERTY(BlueprintAssignable)
