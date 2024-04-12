@@ -20,6 +20,8 @@ class ACTIONROGUELIKE_API ASGameModeBase : public AGameModeBase
 	GENERATED_BODY()
 	
 public:
+	virtual void OnActorKilled(AActor* VictimActor, AActor* Killer);
+	
 	ASGameModeBase();
 	
 	virtual void StartPlay() override;
@@ -47,4 +49,7 @@ protected:
 
 	UFUNCTION()
 	void OnQueryCompleted(UEnvQueryInstanceBlueprintWrapper* QueryInstance, EEnvQueryStatus::Type QueryStatus);
+
+	UFUNCTION()
+	void RespawnPlayerElapsed(AController* Controller);
 };
