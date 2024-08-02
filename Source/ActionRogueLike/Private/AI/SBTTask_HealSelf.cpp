@@ -4,7 +4,7 @@
 #include "AI/SBTTask_HealSelf.h"
 
 #include "AIController.h"
-#include "ActionRogueLike/SAttributeComponent.h"
+#include "SAttributeComponent.h"
 
 EBTNodeResult::Type USBTTask_HealSelf::ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {

@@ -6,7 +6,7 @@
 #include "DrawDebugHelpers.h"
 #include "EngineUtils.h"
 #include "SCharacter.h"
-#include "ActionRogueLike/SAttributeComponent.h"
+#include "SAttributeComponent.h"
 #include "AI/SAICharacter.h"
 #include "EnvironmentQuery/EnvQueryManager.h"
 #include "EnvironmentQuery/EnvQueryTypes.h"

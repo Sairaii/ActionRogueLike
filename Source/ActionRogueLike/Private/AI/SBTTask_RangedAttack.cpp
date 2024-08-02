@@ -4,7 +4,7 @@
 #include "AI/SBTTask_RangedAttack.h"
 #include "GameFramework/Character.h"
 #include "AIController.h"
-#include "ActionRogueLike/SAttributeComponent.h"
+#include "SAttributeComponent.h"
 #include "BehaviorTree/BlackboardComponent.h"
 
 

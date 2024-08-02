@@ -6,14 +6,14 @@
 #include "AIController.h"
 #include "BrainComponent.h"
 #include "DrawDebugHelpers.h"
-#include "ActionRogueLike/SAttributeComponent.h"
-#include "ActionRogueLike/SWorldUserWidget.h"
+#include "SAttributeComponent.h"
+#include "SWorldUserWidget.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "Blueprint/UserWidget.h"
 #include "Perception/PawnSensingComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
-#include "ActionRogueLike/SActionComponent.h"
+#include "SActionComponent.h"
 
 
 // Sets default values

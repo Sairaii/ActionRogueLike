@@ -4,7 +4,7 @@
 #include "AI/SBTService_CheckHealth.h"
 
 #include "AIController.h"
-#include "ActionRogueLike/SAttributeComponent.h"
+#include "SAttributeComponent.h"
 #include "BehaviorTree/BlackboardComponent.h"
 
 USBTService_CheckHealth::USBTService_CheckHealth()
